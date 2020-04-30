@@ -1,0 +1,47 @@
+#parametre des switchs
+[[switch]]
+
+    nom='br0'
+    type='bridge'
+    datapath_type='netdev'
+
+    [[switch.port]]
+        nom='vlan1000'
+        type='internal'
+    [[switch.port]]
+        nom='dpdk-p0'
+        type='dpdk'
+    [[switch.port]]
+        nom='dpdk-p1'
+        type='dpdk'
+    [[switch.port]]
+        nom='dpdk-p2'
+        type='dpdk'
+    [[switch.port]]
+        nom='dpdk-p3'
+        type='dpdk'
+
+#parametres des nic a connecter aux switchs avec dpdk
+[[nic]]
+    adresse='0000:00:19.0'
+    driver='igb_uio'
+    switch='br0'
+    nomport='dpdk-p0'
+
+[[nic]]
+    adresse='0000:04:00.0'
+    driver='igb_uio'
+    switch='br0'
+    nomport='dpdk-p1'
+
+[[nic]]
+    adresse='0000:05:00.0'
+    driver='igb_uio'
+    switch='br0'
+    nomport='dpdk-p2'
+
+[[nic]]
+    adresse='0000:06:00.0'
+    driver='igb_uio'
+    switch='br0'
+    nomport='dpdk-p3'
