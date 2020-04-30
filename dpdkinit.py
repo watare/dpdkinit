@@ -3,7 +3,7 @@ import os
 import toml
 import subprocess as sub
 
-config = toml.load('confdpdkinit.toml')
+config = toml.load('/home/root/dpdkinit/confdpdkinit.toml')
 
 # chargement des drivers
 sub.run(["modprobe igb_uio"], shell=True)
