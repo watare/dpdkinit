@@ -1,0 +1,10 @@
+[Unit]
+Description=dpdkinit
+After=tlp-init.service
+[Service]
+Type=oneshot
+RemainAfterExit=no
+ExecStart=/usr/bin/dpdkinit.py
+[Install]
+WantedBy=multi-user.target
+
